@@ -44,7 +44,6 @@ Afin de bien organiser votre projet et suivre votre progression à travers les �
    ```sh
    git commit -m "Ajout des modifications pour l'épisode X"
    ```
-
 4. **Pousser la branche sur le dépôt distant :**
 
    Poussez votre branche `episode_X` vers le dépôt distant :
