@@ -50,7 +50,6 @@ Afin de bien organiser votre projet et suivre votre progression à travers les �
    ```sh
    git push -u origin episode_X
    ```
-c
 #### Exemple Complet pour un Épisode
 
 Prenons l'exemple de l'épisode 1 :
