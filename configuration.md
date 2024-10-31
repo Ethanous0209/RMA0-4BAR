@@ -43,7 +43,6 @@ Afin de bien organiser votre projet et suivre votre progression à travers les �
    Enregistrez vos modifications avec un message de commit descriptif :
    ```sh
    git commit -m "Ajout des modifications pour l'épisode X"
-   ```
 
 4. **Pousser la branche sur le dépôt distant :**
 
