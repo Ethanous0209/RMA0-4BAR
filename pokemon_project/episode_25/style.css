@@ -1,1 +1,14 @@
-/* CSS for Episode 25 */
+.p1 {
+    font-family: "Times New Roman", Times, serif;
+    color: blue;
+  }
+  
+  .p2 {
+    font-family: "Arial Narrow", sans-serif, Helvetica, sans-serif;
+    color: orangered;
+  }
+  
+  .p3 {
+    font-family: "Arial", "Courier New", monospace;
+    color: green;
+  }
