@@ -1,1 +1,11 @@
-/* CSS for Episode 23 */
+h1 {
+    background-color: red;
+  }
+  
+  div {
+    background-color: yellow;
+  }
+  
+  p {
+    background-color: blue;
+  }
