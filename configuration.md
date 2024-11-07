@@ -71,7 +71,7 @@ Prenons l'exemple de l'épisode 1 :
 
 4. **Pousser la branche sur le dépôt distant :**
    ```sh
-   git push -u origin episode_1
+  
    ```
 
 #### Gestion des Épisodes Suivants
