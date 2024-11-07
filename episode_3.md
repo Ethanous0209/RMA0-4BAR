@@ -72,7 +72,7 @@ Félicitations, jeune dresseur ! Tu as triomphé des Collines HTML et es prêt �
 - **Objectif** : Utilise des ID CSS.
 - **Description** : Crée des ID CSS dans ton fichier CSS et applique-les aux éléments HTML.
 - **XP** : 15 points
-- **Documentation** : [CSS ID](https://www.w3schools.com/css/css_id.asp)
+- **Documentation** : [CSS ID](https://www.w3schools.com/cssref/sel_id.php)
 
 ---
 
