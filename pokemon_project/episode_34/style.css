@@ -1,1 +1,121 @@
-/* CSS for Episode 34 */
+/* Fond global avec une image du club */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('https://th.bing.com/th/id/OIP.BJq8To-zL-j0zCxhxzrBWAAAAA?rs=1&pid=ImgDetMain') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  /* Conteneur principal */
+  .container {
+    background: rgba(0, 0, 0, 0.5); /* Ajout d'un fond sombre semi-transparent */
+    border-radius: 15px;
+    width: 90%;
+    max-width: 1000px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Titre de la page */
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  /* Paragraphe d'introduction */
+  p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #ddd;
+  }
+  
+  /* Liste des liens */
+  ul {
+    list-style-type: none; /* Supprime les puces à gauche */
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  
+  /* Élément de la liste */
+  li {
+    background-color: rgba(0, 123, 255, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  /* Animation au survol */
+  li:hover {
+    transform: scale(1.05);
+    background-color: rgba(0, 123, 255, 1);
+  }
+  
+  /* Effet d'image à l'intérieur du lien */
+  li img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  li:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Lien avec le texte */
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #f7db4d;
+  }
+  
+  /* Responsive Design pour les petits écrans */
+  @media (max-width: 768px) {
+    ul {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    li {
+      font-size: 16px;
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    ul {
+      grid-template-columns: 1fr;
+    }
+  
+    li {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  
