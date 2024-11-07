@@ -1,1 +1,134 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<title>4e Journée de LDC</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: blue;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+nav {
+  float: left;
+  width: 100%;
+  background: #ccc;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  width: 33.33%; /* Divise les éléments en 3 colonnes */
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 100%;
+  background-color: #f1f1f1;
+  height: auto;
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  nav ul li {
+    width: 100%; /* Règle pour que tout soit en une colonne sur les écrans plus petits */
+  }
+  article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>4e journée de LDC</h2>
+<p>Alors que la 4e journée de cette Ligue des Champions s'est terminée ce mardi, voyons ce qui s'est passé pendant ces deux soirées exceptionnelles, pleines de rebondissements dans le classement général.</p>
+
+<header>
+  <h2>Club</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Arsenal</a></li>
+      <li><a href="#">Aston Villa</a></li>
+      <li><a href="#">Atalanta</a></li>
+      <li><a href="#">Atlético</a></li>
+      <li><a href="#">Barcelone</a></li>
+      <li><a href="#">Bayern</a></li>
+      <li><a href="#">Benfica</a></li>
+      <li><a href="#">Bologne</a></li>
+      <li><a href="#">Brest</a></li>
+      <li><a href="#">Celtic</a></li>
+      <li><a href="#">Club Brugge</a></li>
+      <li><a href="#">Crvena Zvezda</a></li>
+      <li><a href="#">Dortmund</a></li>
+      <li><a href="#">Feyenoord</a></li>
+      <li><a href="#">Girona</a></li>
+      <li><a href="#">GNK Dinamo</a></li>
+      <li><a href="#">Inter Milan</a></li>
+      <li><a href="#">Inter AC</a></li>
+      <li><a href="#">Juventus</a></li>
+      <li><a href="#">Leipzig</a></li>
+      <li><a href="#">Leverkusen</a></li>
+      <li><a href="#">Lille</a></li>
+      <li><a href="#">Liverpool</a></li>
+      <li><a href="#">Man City</a></li>
+      <li><a href="#">Monaco</a></li>  
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">PSV</a></li>
+      <li><a href="#">Real Madrid</a></li>
+      <li><a href="#">FC Salzburg</a></li>
+      <li><a href="#">Shakhtar</a></li>
+      <li><a href="#">S. Bratislava</a></li>
+      <li><a href="#">Sparta Praha</a></li>
+      <li><a href="#">Sporting CP</a></li>
+      <li><a href="#">Sturm Graz</a></li>
+      <li><a href="#">Stuttgart</a></li>
+      <li><a href="#">Young Boys</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Hala Derive !</h1>
+    <p>Les matchs ont été incroyables les uns que les autres. Le Real s'est incliné pour la deuxième fois en deux matchs dans leur stade après la défaite 4-0 au Clasico ; c'est l'AC Milan qui vient crucifier le club espagnol. Début de crise ?</p>
+    <h1>Au fond du gouffre</h1>
+    <p>Le PSG, qui a espéré, retombe. Ils s'inclinent pour la deuxième fois de cette Ligue des Champions, portant leur nombre de points à 4 en 4 matchs, alors qu'il leur reste des rencontres face à de grosses écuries.</p>
+  </article>
+</section>
+
+</body>
+</html>
