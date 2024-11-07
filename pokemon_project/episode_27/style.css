@@ -40,7 +40,7 @@
 }
 
 .mix {
-    border: 5px solid;
+    border: solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(to right, red, yellow, green, cyan, blue, magenta);
 }
