@@ -1,1 +1,50 @@
 <!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+  position: relative;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  font-size: 50px; /* Taille de la police augmentée */
+  text-align: center;
+}
+.line {
+  position: absolute;
+  border: 2px solid black; /* Ligne rouge pour la visibilité */
+  height: calc(100% - 20px);
+  top: 5px;
+  left: 260px; /* Ajustez pour placer la ligne sur la première colonne */
+}
+</style>
+</head>
+<body>
+
+<h1>Tic Tac Toe</h1>
+<p>Aligner 3 X ou 3 O pour l'emporter</p>
+<p>L'avantage initial donne environ 58% pour celui qui commence et il y a 48% de chance de faire un nul ou une victoire si le second joueur répond parfaitement.</p>
+
+<div class="grid-container">
+  <div class="grid-item">X</div>
+  <div class="grid-item"></div>
+  <div class="grid-item">O</div>  
+  <div class="grid-item">X</div>
+  <div class="grid-item">O</div>
+  <div class="grid-item"></div>  
+  <div class="grid-item">X</div>
+  <div class="grid-item">O</div>
+  <div class="grid-item">X</div>  
+  <div class="line"></div> <!-- Ligne verticale ajoutée -->
+</div>
+
+</body>
+</html>
+
+
