@@ -1,1 +1,123 @@
 <!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .container {
+      width: 100%;
+      background-color: #ddd;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+
+    .skills {
+      text-align: right;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      animation: fillSkill 2.5s forwards; /* Animation qui dure 2.5 secondes */
+    }
+
+    /* Animation pour les jauges */
+    @keyframes fillSkill {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: inherit; /* La largeur finale est héritée du style dynamique */
+      }
+    }
+
+    .html {
+      background-color: red;
+      width: 0;
+    }
+
+    .css {
+      background-color: blue;
+      width: 0;
+    }
+
+    .js {
+      background-color: green;
+      width: 0;
+    }
+
+    .php {
+      background-color: purple;
+      width: 0;
+    }
+
+  </style>
+</head>
+<body>
+
+<h1>Mes Compétences</h1>
+
+<p>HTML</p>
+<div class="container">
+  <div class="skills html" data-percent="90">0%</div>
+</div>
+
+<p>CSS</p>
+<div class="container">
+  <div class="skills css" data-percent="80">0%</div>
+</div>
+
+<p>JavaScript</p>
+<div class="container">
+  <div class="skills js" data-percent="65">0%</div>
+</div>
+
+<p>PHP</p>
+<div class="container">
+  <div class="skills php" data-percent="60">0%</div>
+</div>
+
+<script>
+  // Fonction pour mettre à jour le pourcentage
+  function animateProgressBar() {
+    const skills = document.querySelectorAll('.skills');
+    skills.forEach((skill, index) => {
+      let percentage = skill.getAttribute('data-percent');
+      let currentWidth = 0;
+      let delay = index * 500; // Délais d'0.5 seconde entre chaque barre de progression
+
+      // Animation du pourcentage
+      setTimeout(() => {
+        let updatePercentage = setInterval(() => {
+          if (currentWidth < percentage) {
+            currentWidth++;
+            skill.innerText = `${currentWidth}%`; // Met à jour le texte
+          } else {
+            clearInterval(updatePercentage); // Arrête l'intervalle lorsque la barre atteint le pourcentage
+          }
+        }, 25); // Vitesse de l'animation (plus bas = plus rapide)
+      }, delay); // Applique le délai pour chaque barre
+    });
+  }
+
+  // Démarre l'animation lorsque la page est prête
+  window.onload = animateProgressBar;
+</script>
+
+</body>
+</html>
