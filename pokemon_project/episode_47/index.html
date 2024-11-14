@@ -1,1 +1,94 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire avec Lien</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 5px;
+            text-align: left;
+            display: block;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Formulaire de Contact</h1>
+
+    <form action="photo_page.php" method="post">
+        <div>
+            <label for="name">Nom :</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+
+        <div>
+            <label for="email">E-mail :</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <!-- Lien qui agit comme un bouton d'envoi -->
+        <a href="https://i.pinimg.com/originals/b5/e6/7f/b5e67f2b97e65eb36e9f7f2d9fc99ff2.jpg" class="submit-button">Envoyer</a>
+    </form>
+</div>
+
+</body>
+</html>
