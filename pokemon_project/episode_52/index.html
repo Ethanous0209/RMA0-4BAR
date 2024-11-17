@@ -1,1 +1,85 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Design Example</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #1e90ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            color: #1e90ff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            border-bottom: 2px solid #1e90ff;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #1e90ff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-right: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #104e8b;
+            transform: translateY(-2px);
+        }
+        button:focus {
+            outline: none;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<h1>The Modern Way</h1>
+
+<div class="container">
+    <h2>FC Barcelone</h2>
+    <p>Le FC Barcelone, souvent appelé Barça, est l'un des clubs de football les plus prestigieux et les plus populaires au monde. Fondé en 1899 par un groupe de footballeurs suisses, espagnols et anglais dirigé par Joan Gamper, le club est basé à Barcelone, en Catalogne, et incarne l'esprit de la région et son désir d'autonomie.</p>
+    <p>Le FC Barcelone est reconnu pour son style de jeu unique et attractif appelé "tiki-taka", basé sur la possession et des passes rapides. Ce style a été perfectionné sous la direction d'entraîneurs légendaires tels que Johan Cruyff et Pep Guardiola. Le club a remporté de nombreux titres nationaux et internationaux, notamment plusieurs titres de la Liga et de la Ligue des Champions de l'UEFA.</p>
+    <p>Le slogan du club, "Més que un club" (plus qu'un club), reflète son engagement envers les valeurs sociales, culturelles et sportives. Le FC Barcelone n'est pas seulement une équipe de football, mais un symbole d'identité et de fierté pour ses supporters à travers le monde.</p>
+    <p>
+        <button>En savoir plus</button>
+        <button>Suivre le club</button>
+    </p>
+</div>
+
+</body>
+</html>
