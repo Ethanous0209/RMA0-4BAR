@@ -1,1 +1,148 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Club Dropdown</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Verdana', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        h2, p {
+            text-align: center;
+            color: #fff;
+        }
+
+        /* Dropdown Button */
+        .dropbtn {
+            background-color: #ff7f50;
+            color: white;
+            padding: 16px 24px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .dropbtn:hover {
+            background-color: #e57347;
+            transform: translateY(-3px);
+        }
+
+        /* Dropdown Container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        /* Dropdown Content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 220px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.2s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #e57347;
+        }
+
+        /* Content Display Box */
+        .content-display {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: black;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            width: 100%;
+            animation: slideUp 0.5s ease-in-out;
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<h2>Choisie une equipe </h2>
+<p>Selectionne ton equipe preferer parmi les 3 </p>
+
+<div class="dropdown">
+    <button class="dropbtn">Select a Club</button>
+    <div class="dropdown-content">
+        <a href="#" onclick="showContent('barca')">FC Barcelona</a>
+        <a href="#" onclick="showContent('om')">Olympique de Marseille</a>
+        <a href="#" onclick="showContent('psg')">Paris Saint-Germain</a>
+    </div>
+</div>
+
+<div id="content-display" class="content-display">
+    <p>Choisi une equipe de foot .</p>
+</div>
+
+<script>
+    function showContent(contentId) {
+        const content = {
+            barca: `
+                <h3>FC Barcelona</h3>
+                <p>FC Barcelona, fondé en 1899, est l'un des clubs les plus prestigieux au monde. Basé à Barcelone, en Espagne, le club est connu pour son style de jeu unique appelé "Tiki-Taka". Avec des légendes comme Lionel Messi, Xavi, et Andrés Iniesta, le Barça a remporté de nombreux titres, dont plusieurs Ligues des champions et Liga.</p>
+                <p>Le club joue ses matchs au Camp Nou, l'un des plus grands stades d'Europe, avec une capacité de 99 000 spectateurs. Les fans du club, surnommés "Culés", sont célèbres pour leur passion et leur loyauté envers le club.</p>
+            `,
+            om: `
+                <h3>Olympique de Marseille</h3>
+                <p>L'Olympique de Marseille, fondé en 1899, est l'un des clubs les plus emblématiques de France. Basé à Marseille, il a remporté de nombreux titres, dont la Ligue des champions en 1993, faisant de lui le seul club français à avoir remporté ce prestigieux trophée.</p>
+                <p>Le Stade Vélodrome, avec une capacité de plus de 67 000 places, est le théâtre des exploits de l'OM, et ses supporters, les "Marseillais", sont connus pour leur fervente passion et leurs chants enflammés.</p>
+            `,
+            psg: `
+                <h3>Paris Saint-Germain (PSG)</h3>
+                <p>Le Paris Saint-Germain, fondé en 1970, est le club phare de la capitale française. Avec des investissements massifs ces dernières années, le PSG est devenu une puissance majeure en Europe, attirant des joueurs de classe mondiale comme Neymar, Kylian Mbappé et Lionel Messi.</p>
+                <p>Le PSG joue au Parc des Princes, un stade mythique situé à Paris. Le club a remporté de nombreux titres nationaux, dont la Ligue 1, et vise désormais à dominer l'Europe avec son équipe de stars.</p>
+            `
+        };
+
+        document.getElementById('content-display').innerHTML = content[contentId];
+    }
+</script>
+
+</body>
+</html>
