@@ -1,1 +1,86 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Amélioré</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(to bottom right, #e0f7fa, #f1f8e9);
+            color: #333;
+        }
+        .content {
+            min-height: 100vh;
+            padding: 40px;
+            padding-bottom: 100px; /* Hauteur de la footer */
+            animation: fadeIn 2s ease-in-out;
+        }
+        h2 {
+            font-size: 2.5em;
+            color: #00695c;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+        p:hover {
+            transform: translateY(-5px);
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #004d40;
+            color: #f1f1f1;
+            text-align: center;
+            padding: 15px 0;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+            animation: slideUp 1s ease-in-out;
+        }
+        .footer a {
+            color: #ffab40;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: #ff6d00;
+            text-decoration: underline;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <h2>Revivo Project</h2>
+    <p>Le Revivo Project est un groupe musical qui mêle harmonieusement des éléments de la musique traditionnelle israélienne et méditerranéenne avec des arrangements modernes. Fondé par le musicien et producteur Yossi Azulay, ce projet est né du désir de faire revivre et de célébrer la riche culture musicale sépharade et orientale, souvent transmise de génération en génération.</p>
+    <p>Le Revivo Project se distingue par ses medleys captivants qui reprennent des chansons populaires anciennes, en leur insufflant une nouvelle vie tout en conservant leur essence nostalgique. Ces medleys, généralement interprétés en hébreu, marient des rythmes festifs et des ballades émouvantes qui touchent le cœur de leur public. Le projet s'est rapidement fait une place unique sur la scène musicale, attirant des fans de toutes générations grâce à sa capacité à raviver la mémoire collective et à créer une atmosphère de célébration.</p>
+    <p>Le groupe est composé de musiciens talentueux et passionnés, dont la performance sur scène est marquée par une énergie vibrante et une sincérité touchante. L'objectif principal du Revivo Project est de reconnecter la jeune génération avec la musique traditionnelle tout en offrant une expérience musicale qui unit les gens autour de la danse et du chant.</p>
+    <p>Avec des albums à succès et des tournées internationales, le Revivo Project est devenu un symbole d'amour et de préservation de la culture à travers la musique. Il incarne le pont entre le passé et le présent, honorant les racines tout en les réinventant pour le public moderne.</p>
+</div>
+
+<div class="footer">
+    <p>© 2024 Nadjar Ethan. Tous droits réservés. | <a href="#contact">Contactez-nous</a></p>
+</div>
+
+</body>
+</html>
