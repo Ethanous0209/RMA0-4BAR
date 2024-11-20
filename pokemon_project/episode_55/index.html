@@ -1,1 +1,95 @@
 <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>FC Barcelone</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header">
+      <h1>FC Barcelone</h1>
+      <p>"Més que un club" - Plus qu'un club</p>
+    </div>
+
+    <!-- Menu Section -->
+    <div class="menu">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a onclick="showSection('classement')">Classement</a></li>
+        <li><a onclick="showSection('joueurs')">Joueurs actuels</a></li>
+        <li><a onclick="showSection('histoire')">Histoire</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Sections -->
+    <div id="classement" class="main">
+      <h2>Classement actuel de la Liga</h2>
+      <p>Voici un exemple de classement :</p>
+      <ul>
+        <li>1. FC Barcelone - 33 pts</li>
+        <li>2. Real Madrid  - 27 pts</li>
+        <li>3. Atlético Madrid - 26 pts</li>
+        <li>4. Villarreal - 24 pts</li>
+        <li>5. Ca Osasuna - 21 pts</li>
+      </ul>
+    </div>
+
+    <div id="joueurs" class="main">
+      <h2>Joueurs actuels</h2>
+      <ul>
+        <li>Robert Lewandowski</li>
+        <li>Pedri</li>
+        <li>Gavi</li>
+        <li>Frenkie de Jong</li>
+        <li>Marc-André ter Stegen</li>
+      </ul>
+    </div>
+
+    <div id="histoire" class="main">
+      <h2>Histoire du FC Barcelone</h2>
+      <p>Le FC Barcelone, fondé en 1899 par un groupe de sportifs mené par Joan Gamper, est l’un des clubs les plus emblématiques du football mondial. Représentant la région de Catalogne, il est bien plus qu’un simple club de football, comme en témoigne sa devise : "Més que un club" (Plus qu’un club).
+
+        Au fil des décennies, le Barça a marqué l’histoire grâce à son style de jeu unique, surnommé le tiki-taka, et ses générations de joueurs légendaires, tels que Johan Cruyff, Lionel Messi, Xavi, et Iniesta.
+        
+        Le club a remporté de nombreux trophées prestigieux, notamment 5 Ligues des Champions, 26 titres de Liga, et des dizaines de Coupes nationales et internationales. Le Camp Nou, son stade emblématique, est le plus grand d’Europe et peut accueillir près de 100 000 spectateurs.
+        
+        Le FC Barcelone est également connu pour ses valeurs fortes : la défense de l’identité catalane, la promotion de jeunes talents via son académie, La Masia, et son modèle unique de propriété, où le club appartient à ses membres, appelés socios.
+        
+        Aujourd’hui, le Barça continue d’être une référence mondiale, tant sur le plan sportif que culturel..</p>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right">
+      <h2>Faits intéressants</h2>
+      <ul>
+        <li>La devise du club : <em>"Més que un club"</em>.</li>
+        <li>Le FC Barcelone est détenu par ses supporters (socio).</li>
+        <li>Rival historique : Real Madrid (El Clásico).</li>
+      </ul>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+      <p>© 2024 FC Barcelone Fansite. Tous droits réservés.</p>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function showSection(sectionId) {
+      // Cacher toutes les sections
+      const sections = document.querySelectorAll('.main');
+      sections.forEach(section => section.classList.remove('active'));
+
+      // Afficher la section demandée
+      const activeSection = document.getElementById(sectionId);
+      if (activeSection) {
+        activeSection.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
