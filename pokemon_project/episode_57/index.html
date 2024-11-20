@@ -1,1 +1,45 @@
 <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition avec Dégradé Multi-Couleurs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      text-align: center;
+    }
+
+    div {
+      width: 500px; /* Longueur plus grande */
+      height: 100px; /* Hauteur maintenue */
+      background: linear-gradient(45deg, red, blue, green, yellow, purple); /* Dégradé avec plusieurs couleurs */
+      transition: width 2s, background 3s ease-in-out; /* Transition sur la largeur et les couleurs */
+      margin: 20px auto;
+      border-radius: 8px;
+    }
+
+    div:hover {
+      width: 800px; /* Agrandissement lors du survol */
+      background: linear-gradient(45deg, orange, pink, skyblue, gold, gray); /* Nouveau dégradé avec d'autres couleurs */
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Effet de Transition avec Dégradé Multi-Couleurs</h1>
+  <p>Survolez le rectangle pour voir l'effet de transition avec plusieurs couleurs.</p>
+
+  <div></div>
+
+</body>
+</html>
