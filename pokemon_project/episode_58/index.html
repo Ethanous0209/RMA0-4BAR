@@ -1,1 +1,131 @@
 <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Badges avec Notifications Dynamiques</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 50px;
+      text-align: center;
+      background-color: #f4f4f9;
+    }
+
+    /* Style du badge avec animation */
+    .badge {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .badge:hover {
+      background-color: #45a049; /* Changement de couleur au survol */
+      transform: scale(1.1); /* Agrandissement léger au survol */
+    }
+
+    /* Animation de rebond du badge au moment de l'ajout de notification */
+    .badge.bounce {
+      animation: bounce 0.6s ease-in-out;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Style de la notification (petit cercle rouge) */
+    .badge::after {
+      content: attr(data-count);
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 20px;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+
+    /* Bouton pour augmenter le nombre de notifications */
+    button {
+      margin-top: 20px;
+      padding: 10px 15px;
+      font-size: 16px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0b7dda;
+      transform: scale(1.1); /* Agrandissement du bouton au survol */
+    }
+
+    button:active {
+      transform: scale(1); /* Rétablir taille au clic */
+    }
+
+    /* Animation de l'apparition de la notification */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Effet de transition pour le bouton */
+    button:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h2>Gestion des Notifications</h2>
+    <div class="badge" id="myBadge" data-count="0">Notifications</div>
+    <br>
+    <button onclick="increaseBadgeCount()">Ajouter Notification</button>
+    <p>Chaque clic ajoute une notification au badge. Essayez d'ajouter plusieurs notifications !</p>
+  </div>
+
+  <script>
+    // Fonction pour augmenter le compteur du badge et ajouter l'animation de rebond
+    function increaseBadgeCount() {
+      var badge = document.getElementById("myBadge");
+      var count = parseInt(badge.getAttribute("data-count"));  // Récupérer le nombre actuel
+      badge.setAttribute("data-count", count + 1);  // Augmenter de 1 et mettre à jour
+
+      // Ajouter l'animation de rebond au badge
+      badge.classList.add('bounce');
+      setTimeout(function() {
+        badge.classList.remove('bounce'); // Retirer l'animation après son exécution
+      }, 600);
+    }
+  </script>
+
+</body>
+</html>
