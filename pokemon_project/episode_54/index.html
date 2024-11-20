@@ -1,1 +1,167 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Improved Slideshow</title>
+<style>
+  * {box-sizing: border-box; margin: 0; padding: 0;}
+  body {font-family: 'Arial', sans-serif; background-color: #f4f4f9; color: #333;}
+  
+  .slideshow-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .mySlides {display: none; position: relative;}
+  
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    user-select: none;
+    transition: background 0.3s;
+  }
+  
+  .prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .prev {left: 10px;}
+  .next {right: 10px;}
+  
+  .text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+  }
+  
+  .numbertext {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .dots-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  @keyframes fade {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+  }
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="https://th.bing.com/th/id/R.a6f4228acfd4e8d1a0040b1548bc920b?rik=G7l%2f0YjZi9nABg&pid=ImgRaw&r=0" alt="FC Barcelone">
+    <div class="text">FC Barcelone</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="https://th.bing.com/th/id/R.96877c4acc66ba1f5fd6e794b39ada11?rik=vtSDYgL%2fScAIjg&pid=ImgRaw&r=0" alt="Olympique De Marseille">
+    <div class="text">Olympique De Marseille</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="https://th.bing.com/th/id/OIP.VdTgtA7KUlQT9ofKAkMhqAHaEo?rs=1&pid=ImgDetMain" alt="Manchester City">
+    <div class="text">Manchester City</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<div class="dots-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    const slides = document.getElementsByClassName("mySlides");
+    const dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1;}
+    if (n < 1) {slideIndex = slides.length;}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+</script>
+
+</body>
+</html>
