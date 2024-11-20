@@ -1,1 +1,129 @@
 <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Effet Machine à Écrire</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #f4f4f9;
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    #demo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #4CAF50;
+      padding: 10px;
+      border: 2px solid #4CAF50;
+      display: inline-block;
+      margin-top: 20px;
+      min-width: 500px;
+      word-wrap: break-word;
+      white-space: pre-wrap; /* Permet de conserver les sauts de ligne dans le texte */
+      text-align: left;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    button:hover {
+      background-color: #0b7dda;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    /* Animations pour le bouton */
+    @keyframes buttonPulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    button:hover {
+      animation: buttonPulse 1s infinite;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Effet Machine à Écrire</h1>
+
+  <button onclick="typeWriter()">Cliquez ici</button>
+
+  <p id="demo"></p>
+
+  <script>
+    var i = 0;
+    var txt = `从中国来的第一封信
+亲爱的朋友：你好！
+
+我的名字叫高小云，是中国上海的一个中学生，今年十七岁了。我想你可能和我一样大。上海很大也很漂亮，过去有东方巴黎之称。人也很多，是中国人口最多的城市。
+
+现在是冬天，天气不错。但是我不喜欢冬天，我怕冷，不爱每天清早去上学。上海的冬天一般不冷，不大下雪，常刮风，有时也会结冰。下个星期我们就放寒假了。在假期里，我喜欢在家看书，听音乐，看电视，晚上很迟睡觉，早上很晚起床。我也喜欢去朋友的家玩儿。
+
+在寒假里，有中国传统的春节，人人放三天假，每天有很好的东西吃，放鞭炮，亲戚朋友在一起非常热闹。由于节日里吃得很多，很饱，大家都胖了，要忙着去减肥。
+
+三月是春天。刚开始的时候，很阴冷，常下雨。到了五月，花开了，树绿了，天气渐渐变暖和了。公园很漂亮，很多人去那里看花，划船，散步。可是我不能像他们那样，因为有许多作业和考试在等着我。
+
+中国人不过圣诞节，我很想知道圣诞节是怎么样的？是不是和中国的春节一样热闹？寒假你们都做什么？你们那儿的冬天冷吗？下雪吗？
+
+希望你会给我写信。
+祝你新年快乐！身体健康！`;
+    var speed = 100; // Vitesse d'écriture
+    var deleteSpeed = 50; // Vitesse d'effacement
+    var deleteText = false; // Indicateur pour effacer le texte après l'écriture
+
+    function typeWriter() {
+      if (i < txt.length) {
+        // Ajoute un caractère à chaque appel
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed); // Répète l'appel après un délai
+      } else if (!deleteText) {
+        // Commence à effacer le texte après l'écriture complète
+        setTimeout(deleteTextFunction, 2000); // Attend 2 secondes avant de commencer à effacer
+        deleteText = true;
+      }
+    }
+
+    function deleteTextFunction() {
+      var currentText = document.getElementById("demo").innerHTML;
+      if (currentText.length > 0) {
+        // Efface le dernier caractère
+        document.getElementById("demo").innerHTML = currentText.slice(0, -1);
+        setTimeout(deleteTextFunction, deleteSpeed); // Continue à effacer avec un délai
+      } else {
+        // Réinitialise la fonction de typewriter pour recommencer le cycle
+        deleteText = false;
+        i = 0;
+        setTimeout(typeWriter, 500); // Attend 0.5 seconde avant de recommencer l'écriture
+      }
+    }
+  </script>
+
+</body>
+</html>
